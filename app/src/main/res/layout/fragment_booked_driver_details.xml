@@ -1,0 +1,221 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/location_selection_field_background"
+    map:layout_constraintBottom_toBottomOf="parent"
+    map:layout_constraintLeft_toLeftOf="parent"
+    map:layout_constraintRight_toRightOf="parent"
+    android:layout_width="match_parent"
+    android:paddingBottom="32dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:id="@+id/driver_details"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:id="@+id/driver_image"
+            android:background="@drawable/image_placeholder"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Name"
+            android:id="@+id/driver_name"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            map:layout_constraintLeft_toRightOf="@id/driver_image"
+            map:layout_constraintTop_toTopOf="@id/driver_image"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            map:layout_constraintTop_toBottomOf="@id/driver_name"
+            map:layout_constraintLeft_toLeftOf="@id/driver_name"
+            android:text="AB 1234"
+            android:id="@+id/ambulance_number"
+            android:textColor="#626262"
+            android:textSize="18sp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="12dp"-->
+<!--            android:layout_height="12dp"-->
+<!--            android:id="@+id/star"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:src="@drawable/ic_baseline_star_24"-->
+<!--            map:layout_constraintLeft_toRightOf="@id/rating_number"-->
+<!--            map:layout_constraintTop_toTopOf="@id/rating_number"-->
+<!--            map:layout_constraintBottom_toBottomOf="@id/rating_number"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toTopOf="@id/driver_details"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/call_driver_background"
+        android:text="Call Driver"
+        android:paddingStart="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingEnd="16dp"
+        android:id="@+id/call_driver_button"
+        android:textColor="#fafafa"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        map:layout_constraintTop_toBottomOf="@id/driver_details"
+        map:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:id="@+id/travel_details">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance_text"
+                android:text="Distance"
+                android:fontFamily="@font/nunito_light"
+                android:textColor="#919191"
+                android:textSize="12sp"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance"
+                android:text="3.2"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:fontFamily="@font/nunito"
+                map:layout_constraintLeft_toLeftOf="@id/distance_text"
+                map:layout_constraintTop_toBottomOf="@id/distance_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance_unit"
+                android:text="Km"
+                android:textSize="12sp"
+                android:textColor="#212121"
+                android:fontFamily="@font/nunito_light"
+                map:layout_constraintLeft_toRightOf="@id/distance"
+                map:layout_constraintBottom_toBottomOf="@id/distance"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_details">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price_text"
+                android:text="Price"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toLeftOf="parent"
+                android:fontFamily="@font/nunito_light"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:text="2400"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/nunito"
+                map:layout_constraintLeft_toRightOf="@id/price_currency"
+                map:layout_constraintTop_toBottomOf="@id/price_text"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price_currency"
+                android:text="$"
+                android:textSize="12sp"
+                android:textColor="#212121"
+                android:fontFamily="@font/nunito"
+                map:layout_constraintLeft_toLeftOf="@id/price_text"
+                map:layout_constraintBottom_toBottomOf="@id/price"
+                android:layout_marginBottom="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/rating_details">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating_text"
+                android:text="Rating"
+                android:fontFamily="@font/nunito_light"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating"
+                android:text="4.8"
+                android:textSize="20sp"
+                android:textColor="#212121"
+                android:fontFamily="@font/nunito"
+                map:layout_constraintLeft_toLeftOf="@id/rating_text"
+                map:layout_constraintTop_toBottomOf="@id/rating_text"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_baseline_star_24"
+                map:layout_constraintLeft_toRightOf="@id/rating"
+                android:layout_marginStart="2dp"
+                map:layout_constraintBottom_toBottomOf="@id/rating"
+                android:layout_marginBottom="4dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

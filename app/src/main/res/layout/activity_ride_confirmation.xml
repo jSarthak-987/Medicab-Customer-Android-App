@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RideConfirmationActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:elevation="20dp"
+        android:visibility="visible"
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        android:background="#fafafa">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/choose_your_ambulance_prompt"
+            android:textColor="#626262"
+            android:textSize="12sp"
+            android:id="@+id/choose_your_ambulance_heading"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/als_button"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="16dp"
+            android:layout_marginTop="16dp"
+            map:layout_constraintTop_toBottomOf="@id/choose_your_ambulance_heading"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/als_image"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ambulance"
+                android:contentDescription="@string/ambulance_image" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/als_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toRightOf="@id/als_image"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/advance_life_support_ambulance_type"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/ambulance_type_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="@id/als_text"
+                map:layout_constraintBottom_toBottomOf="@id/als_text"
+                android:text="₹197.00"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bls_button"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="16dp"
+            map:layout_constraintTop_toBottomOf="@id/als_button"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/bls_image"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ambulance"
+                android:contentDescription="@string/ambulance_image" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/bls_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toRightOf="@id/bls_image"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/basic_life_support_ambulance_type"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/bls_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="@id/bls_text"
+                map:layout_constraintBottom_toBottomOf="@id/bls_text"
+                android:text="₹197.00"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mortgage_button"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="16dp"
+            map:layout_constraintTop_toBottomOf="@id/bls_button"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/mortgage_image"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ambulance"
+                android:contentDescription="@string/ambulance_image" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/mortgage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toRightOf="@id/mortgage_image"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/mortgage_ambulance"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/mortgage_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="@id/mortgage_text"
+                map:layout_constraintBottom_toBottomOf="@id/mortgage_text"
+                android:text="₹197.00"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/intercity_button"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="16dp"
+            map:layout_constraintTop_toBottomOf="@id/mortgage_button"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/intercity_image"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ambulance"
+                android:contentDescription="@string/ambulance_image" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/intercity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintLeft_toRightOf="@id/intercity_image"
+                map:layout_constraintBottom_toBottomOf="parent"
+                android:text="Intercity Ambulance"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/intercity_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="@id/intercity_text"
+                map:layout_constraintBottom_toBottomOf="@id/intercity_text"
+                android:text="₹197.00"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/payment_button"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/verify_otp_field_background"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintTop_toBottomOf="@id/intercity_button">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/payment"
+                android:contentDescription="@string/payment_button_description" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_prompt"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="70dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/next123"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@android:color/black"
+                android:contentDescription="@string/next_icon" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/next_button"
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="32dp"
+            map:layout_constraintTop_toBottomOf="@id/payment_button"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/get_started_button_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_ride_text"
+                android:textStyle="bold"
+                android:id="@+id/next_text"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="18sp"/>
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:id="@+id/progress_bar"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintBottom_toTopOf="@id/bottom_panel"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/back_button"
+        android:src="@drawable/back2"
+        android:layout_marginStart="32dp"
+        android:padding="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/back_button_background"
+        android:contentDescription="@string/back_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

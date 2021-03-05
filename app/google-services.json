@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "937479714838",
+    "project_id": "acquired-jet-298514",
+    "storage_bucket": "acquired-jet-298514.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937479714838:android:13c39479eac76d990e9d37",
+        "android_client_info": {
+          "package_name": "com.brightsky.medicab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937479714838-un5o9htlbmgcdcde2hu554jb1no4d8hg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brightsky.medicab",
+            "certificate_hash": "d5b292ed785f67aaa46a8a5ae466ef01412b113d"
+          }
+        },
+        {
+          "client_id": "937479714838-tkeg4kniu0sgtaqsbtk9t8a818nf336l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwWZUZhfAYygyiZiC5zqQqfM9lnOXXlWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937479714838-tkeg4kniu0sgtaqsbtk9t8a818nf336l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="32dp"
+    android:paddingStart="32dp"
+    android:paddingBottom="32dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_panel_rounded_background"
+    tools:context=".BottomSelectionFragment">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Select Ambulance"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        android:paddingTop="16dp"
+        android:visibility="gone"
+        android:paddingBottom="16dp"
+        android:background="@drawable/no_ambulance_available_framelayout_background"
+        android:id="@+id/no_ambulance_available">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Ambulance Available"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="@font/nunito_bold"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/no_ambulance_available"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:background="#fafafa"
+        android:id="@+id/ambulance_types">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:visibility="gone"
+            android:id="@+id/als_button">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/als_image"
+                android:src="@drawable/ic_ambulance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/als_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/about_als"
+                android:text="Advance Life Support"
+                android:textSize="14sp"
+                android:id="@+id/als_type"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/als_image"
+                app:layout_constraintTop_toBottomOf="@id/als_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="About ALS"
+                android:textSize="12sp"
+                android:textColor="#919191"
+                android:id="@+id/about_als"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:id="@+id/als_price"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:id="@+id/bls_button">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/bls_image"
+                android:src="@drawable/ic_ambulance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/bls_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/about_bls"
+                android:text="Basic Life Support"
+                android:textSize="14sp"
+                android:id="@+id/bls_type"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/bls_image"
+                app:layout_constraintTop_toBottomOf="@id/bls_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="About BLS"
+                android:textSize="12sp"
+                android:textColor="#919191"
+                android:id="@+id/about_bls"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="$24"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:id="@+id/bls_price"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:id="@+id/mortgage_button">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/mortgage_image"
+                android:src="@drawable/ic_ambulance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/mortgage_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/about_mortgage"
+                android:text="Mortgage Ambulance"
+                android:textSize="16sp"
+                android:id="@+id/mortgage_type"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/mortgage_image"
+                app:layout_constraintTop_toBottomOf="@id/mortgage_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="About Mortgage Ambulance"
+                android:textSize="12sp"
+                android:textColor="#919191"
+                android:id="@+id/about_mortgage"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="$24"
+                android:textSize="12sp"
+                android:textColor="#212121"
+                android:id="@+id/mortgage_price"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:background="@drawable/ambulance_types_layout_button_background"
+            android:id="@+id/intecity_button">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/intecity_image"
+                android:src="@drawable/ic_ambulance"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/intecity_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/about_intecity"
+                android:text="Intercity Ambulance"
+                android:textSize="16sp"
+                android:id="@+id/intecity_type"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/intecity_image"
+                app:layout_constraintTop_toBottomOf="@id/intecity_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="About Intercity Ambulance"
+                android:textSize="12sp"
+                android:textColor="#919191"
+                android:id="@+id/about_intecity"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:id="@+id/intecity_price"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/nunito_semibold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/promo_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ambulance_types"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/promo_code_background"
+        android:visibility="gone"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:id="@+id/add_icon"
+            android:src="@drawable/ic_plus"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Reference / Promo Code"
+            android:paddingTop="16dp"
+            android:textColor="@color/mast"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="12sp"
+            android:id="@+id/promo_code_text"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="16dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/promo_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="48dp"
+        android:visibility="gone"
+        android:id="@+id/payment_info">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/advanced_price_text"
+            android:text="Advanced Payment"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="14sp"
+            android:textColor="#212121"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/advanced_payment"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#212121"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/advanced_price_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/later_price_text"
+            android:text="Payment After Ride"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#212121"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/later_payment"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/advanced_payment"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#212121"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttons"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/payment_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/payment_button"
+            android:background="@drawable/confirm_button_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintRight_toLeftOf="@id/schedule_ride"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book ALS"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/nunito_bold"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/schedule_ride_button"
+            android:id="@+id/schedule_ride">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/schedule_ride_clock_icon"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

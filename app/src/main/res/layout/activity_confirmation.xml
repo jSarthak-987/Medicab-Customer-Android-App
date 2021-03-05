@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmationActivity"
+    android:background="@android:color/white"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/pickup_location_layout"
+        android:layout_marginTop="48dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_map_pin"
+            android:id="@+id/pickup_location_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/pickup_location_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pickup_location"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toRightOf="@id/pickup_location_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/exo2_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/more_icon"
+        android:src="@drawable/ic_more_vertical"
+        app:layout_constraintTop_toBottomOf="@id/pickup_location_layout"
+        app:layout_constraintLeft_toLeftOf="@id/pickup_location_layout"
+        android:contentDescription="@string/path_icon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/more_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/hospital_location_layout"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_map_pin"
+            android:id="@+id/hospital_location_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/hospital_location_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hospital_location"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toRightOf="@id/hospital_location_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/exo2_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/type_of_ambulance"
+        app:layout_constraintTop_toBottomOf="@id/hospital_location_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ambulance_selection_heading"
+            android:text="@string/ambulance_selection_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/exo2_light"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ambulance_selection_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/ambulance_type_recyclerview"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/confirm_button_background"
+        android:text="@string/book_ambulance_button_text"
+        android:textSize="14sp"
+        android:id="@+id/book_ambulance_button"
+        android:fontFamily="@font/exo2_bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

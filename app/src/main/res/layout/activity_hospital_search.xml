@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fafafa"
+    android:layout_height="match_parent"
+    tools:context=".PickupSearch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="56dp"
+        android:background="#fafafa">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back2"
+            android:layout_gravity="center"
+            android:id="@+id/back_button"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#fafafa"
+            android:id="@+id/hospital_search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_destination_location_hint"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="#212121"
+            android:fontFamily="@font/nunito_semibold"/>
+
+        </LinearLayout>
+
+    <com.mecofarid.squeezeloader.SqueezeLoader
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:sl_squeezebarWidth="120dp"
+        app:sl_colorSqueezebar="#212121"
+        android:visibility="invisible"
+        app:sl_animationDuration="1200"
+        android:id="@+id/pickup_loading_bar"/>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/pickup_locate_on_map_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_marginStart="18dp"
+            android:layout_gravity="center"
+            android:layout_height="14dp"
+            android:src="@drawable/current_location"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_from_map_text"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/nunito_semibold"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/pickup_search_result_recycler_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent_search_title"
+            android:text="Recent Results"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:fontFamily="@font/nunito"
+            android:textColor="#212121"
+            android:layout_marginStart="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent_search_hospitals_recycler_view"/>
+
+    </LinearLayout>
+
+</LinearLayout>

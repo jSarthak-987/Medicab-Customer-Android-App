@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".GetStartedActivity">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/medicab_logo"
+            android:src="@mipmap/textlogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:contentDescription="@string/app_logo" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:id="@+id/heading_image"
+            app:layout_constraintTop_toBottomOf="@id/medicab_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/getstarted"
+            android:contentDescription="@string/random_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito_semibold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heading_image"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/move_with_safety"
+            android:textColor="@android:color/black"
+            android:textSize="33sp" />
+
+        <FrameLayout
+            android:elevation="10dp"
+            android:layout_marginTop="100dp"
+            android:id="@+id/get_started_button"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/get_started"
+            android:background="@drawable/get_started_button_background"
+            android:textSize="16sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_started"
+                    android:textStyle="bold"
+                    android:id="@+id/get_started_text"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textSize="18sp"/>
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:id="@+id/progress_bar"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+
+        </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

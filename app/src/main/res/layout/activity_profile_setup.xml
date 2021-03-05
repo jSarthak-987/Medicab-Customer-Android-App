@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".ProfileSetupActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_profile_prompt"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:layout_marginTop="64dp"
+        android:id="@+id/profile_create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"/>
+
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/profile_image_frame_layout"
+        app:layout_constraintLeft_toLeftOf="@id/profile_create"
+        app:layout_constraintTop_toBottomOf="@id/profile_create">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/profile_image"
+            android:src="@mipmap/avatar_dummy"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit"
+            android:layout_gravity="bottom|right" />
+
+    </FrameLayout>
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_width="match_parent"
+        app:borderColor="#00000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/verify_otp_field_background"
+        android:id="@+id/first_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/profile_image_frame_layout"
+        app:layout_constraintLeft_toLeftOf="@id/profile_image_frame_layout"
+        android:layout_height="60dp">
+
+        <EditText
+            android:textColor="@android:color/black"
+            android:id="@+id/first_name"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/first_name_prompt"
+            android:textColorHint="#a0a0a0"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_width="match_parent"
+        app:borderColor="#00000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/verify_otp_field_background"
+        android:id="@+id/last_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/first_name_edit_text"
+        app:layout_constraintLeft_toLeftOf="@id/profile_image_frame_layout"
+        android:layout_height="60dp">
+
+        <EditText
+            android:textColor="@android:color/black"
+            android:id="@+id/last_name"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/last_name_prompt"
+            android:textColorHint="#a0a0a0"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_width="match_parent"
+        app:borderColor="#00000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/verify_otp_field_background"
+        android:id="@+id/phone_number_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/last_name_edit_text"
+        app:layout_constraintLeft_toLeftOf="@id/profile_image_frame_layout"
+        android:layout_height="60dp">
+
+        <EditText
+            android:textColor="@android:color/black"
+            android:id="@+id/phone_number"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/phone_number_prompt"
+            android:textColorHint="#a0a0a0"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_width="match_parent"
+        app:borderColor="#00000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/verify_otp_field_background"
+        android:id="@+id/email_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/phone_number_edit_text"
+        app:layout_constraintLeft_toLeftOf="@id/profile_image_frame_layout"
+        android:layout_height="60dp">
+
+        <EditText
+            android:textColor="@android:color/black"
+            android:id="@+id/email"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/email_prompt"
+            android:textColorHint="#a0a0a0"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/next_button"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/get_started_button_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_prompt"
+            android:textStyle="bold"
+            android:id="@+id/next_text"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"/>
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:id="@+id/progress_bar"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

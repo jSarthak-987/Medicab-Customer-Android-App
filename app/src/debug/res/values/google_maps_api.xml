@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=D5:B2:92:ED:78:5F:67:AA:A4:6A:8A:5A:E4:66:EF:01:41:2B:11:3D%3Bcom.brightsky.medicab
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.brightsky.medicab
+
+    SHA-1 certificate fingerprint:
+    D5:B2:92:ED:78:5F:67:AA:A4:6A:8A:5A:E4:66:EF:01:41:2B:11:3D
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDTyvJynEqi6qChFNEgNaCXqJrLBN8BIFk</string>
+</resources>
